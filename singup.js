@@ -24,7 +24,7 @@ singupForm.addEventListener('submit', (e) => {
     });
 
     localStorage.setItem('users', JSON.stringify(Users));
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 
     alert('Registro exitoso');
 });
