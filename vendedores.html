@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Vendedor</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>FacturasApp</h1>
+        <nav>
+            <a href="vendedores.html">Vendedores</a>
+            <a href="facturas.html">Facturas</a>
+            <a href="cliente.html">Clientes</a>
+            <a href="informes.html">Informes</a>
+
+        </nav>
+    </header>
+<div class="container mt-5">
+    <h2>CRUD Vendedor</h2>
+    <form id="vendedorForm">
+        <input type="hidden" id="vendedorId">
+        <div class="form-group">
+            <label>Nombre:</label>
+            <input type="text" id="nombre" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>RUC:</label>
+            <input type="text" id="ruc" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>Dirección:</label>
+            <input type="text" id="direccion" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>Teléfono:</label>
+            <input type="text" id="telefono" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>Porcentaje:</label>
+            <input type="number" id="comision" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+  
+    <table class="table mt-5" id="vendedoresTable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>RUC</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Porcentaje de Comisión</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="vendedores.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Informe
+Nombre: Maria Graciela Esquivel Fernandez
+
+Si desea ver la pagina, ejecute el archivo login.html
+
+He logrado completar todos los requerimientos del trabajo
+Como puntos extras implemente : 
+- CRUD USUARIOS y atenticacion (Login)
+- CRUD Clientes
