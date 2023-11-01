@@ -1,5 +1,4 @@
 document.getElementById('facturaForm').addEventListener('submit', saveFactura);
-document.getElementById('vendedorForm').addEventListener('submit', filtrar);
 
 const facturas = getStoredFacturas();
 
@@ -155,35 +154,6 @@ function saveFactura(e) {
     setStoredFacturas(facturas);
     document.getElementById('facturaForm').reset();
     showFacturas(facturas);
-}
-
-function filtrar(e) {
-    e.preventDefault();
-    var inicio = document.getElementById('fechaInicio').value;
-    var final = document.getElementById('fechaFinal').value;
-    var vendedor = document.getElementById('vendedorFiltrar').value;
-    var facturas = getStoredFacturas();
-
-    if (inicio === "" && final === "") {
-        return;
-    }
-
-    var facturasFiltradas = facturas.filter(factura => {
-        return (inicio === "" || factura.fecha >= inicio) && 
-               (final === "" || factura.fecha <= final)&&
-               (factura.vendedor === vendedor);
-    });
-
-    generarInforme(facturasFiltradas);
-}
-function generarInforme(facturas){
-
-    let sum = 0;
-
-    facturas.forEach(factura => {
-       sum+= factura.comision ;
-    })
-    console.log(sum)
 }
 
 function showFacturas(facturas) {
